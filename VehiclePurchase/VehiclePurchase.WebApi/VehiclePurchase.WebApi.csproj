@@ -4,7 +4,9 @@
 	  <TargetFramework>net5.0</TargetFramework>
 	  <Version>1.1.0</Version>
   </PropertyGroup>
-
+	<PropertyGroup>
+		<AspNetCoreHostingModel>OutOfProcess</AspNetCoreHostingModel>
+	</PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DocumentationFile>VehiclePurchase.WebApi.xml</DocumentationFile>
     <NoWarn>1701;1702;1591</NoWarn>

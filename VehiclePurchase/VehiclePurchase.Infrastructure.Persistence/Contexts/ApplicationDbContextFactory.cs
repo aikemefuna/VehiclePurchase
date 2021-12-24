@@ -9,7 +9,7 @@ namespace VehiclePurchase.Persistence.Contexts
         public ApplicationDbContext CreateDbContext(string[] args)
         {
             var optionsBuilder = new DbContextOptionsBuilder<ApplicationDbContext>();
-            optionsBuilder.UseSqlServer("Data Source=ABP-HQ7-LDIGFT5\\SQLEXPRESS;Initial Catalog=VehiclePurchase;Integrated Security=False;UId=sa;Password=@Reetah39");
+            optionsBuilder.UseSqlServer("Data Source=SQL5098.site4now.net;Initial Catalog=db_a708de_vehicle;Integrated Security=False;UId=db_a708de_vehicle_admin;Password=@Reetah39");
 
 
 
