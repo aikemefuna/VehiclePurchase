@@ -1,8 +1,4 @@
 ﻿using Microsoft.AspNetCore.Builder;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using VehiclePurchase.WebApi.Middlewares;
 
 namespace VehiclePurchase.WebApi.Extensions
@@ -14,7 +10,7 @@ namespace VehiclePurchase.WebApi.Extensions
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "CleanArchitecture.VehiclePurchase.WebApi");
+                c.SwaggerEndpoint("../swagger/v1/swagger.json", "CleanArchitecture.VehiclePurchase.WebApi");
             });
         }
         public static void UseErrorHandlingMiddleware(this IApplicationBuilder app)
