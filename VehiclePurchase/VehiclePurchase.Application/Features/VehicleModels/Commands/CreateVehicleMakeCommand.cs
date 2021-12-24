@@ -32,7 +32,7 @@ namespace VehiclePurchase.Application.Features.VehicleModels.Commands
         {
             #region Checkers
             //check if Vehicle makeID exists
-            if (await _vehicleMakeRepository.ExistAsync(c => c.VehicleMakeId == request.VehicleMakeId))
+            if (!await _vehicleMakeRepository.ExistAsync(c => c.VehicleMakeId == request.VehicleMakeId))
             {
                 //Invalid makeId
                 return ResponseMessage.BadRequest<VehicleModelDTO>(StatusMessage.Vehicle.InValidMakeId);

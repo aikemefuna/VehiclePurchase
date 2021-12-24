@@ -17,7 +17,6 @@ namespace VehiclePurchase.Application.Features.ThirdPartyPurchases.Commands
         public string LastName { get; set; }
         public DateTime DateOfBirth { get; set; }
         public int VehicleId { get; set; }
-        public Vehicle Vehicle { get; set; }
     }
     public class CreateVehicleModelCommandHandler : IRequestHandler<ThirdPartyPurchaseCommand, Response<ThirdPartyPurchasesDTO>>
     {
@@ -36,7 +35,7 @@ namespace VehiclePurchase.Application.Features.ThirdPartyPurchases.Commands
         {
             #region Checkers
             //check if Vehicle ID exists
-            if (await _vehicleRepository.ExistAsync(c => c.VehicleId == request.VehicleId))
+            if (!await _vehicleRepository.ExistAsync(c => c.VehicleId == request.VehicleId))
             {
                 //Invalid makeId
                 return ResponseMessage.BadRequest<ThirdPartyPurchasesDTO>(StatusMessage.ThirdPartyPurchasesResponse.InvalidVehicleId);

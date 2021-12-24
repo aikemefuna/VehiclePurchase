@@ -20,12 +20,12 @@ namespace VBooX.API.Controllers.v1
             return Ok(await Mediator.Send(command));
         }
 
-        [HttpPost]
+        [HttpGet]
         [Route("get-all")]
         [ProducesResponseType(typeof(Response<List<GetAllVehicleModelDTO>>), 200)]
-        public async Task<IActionResult> CreateType(GetAllVehicleModelQuery command)
+        public async Task<IActionResult> GetAll()
         {
-            return Ok(await Mediator.Send(command));
+            return Ok(await Mediator.Send(new GetAllVehicleModelQuery()));
         }
     }
 }

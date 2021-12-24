@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using VehiclePurchase.Application.DTOs.ThirdPartyPurchases;
 using VehiclePurchase.Application.DTOs.Vehicle;
 using VehiclePurchase.Application.DTOs.VehicleBodyType;
 using VehiclePurchase.Application.DTOs.VehicleMake;
@@ -15,6 +16,7 @@ namespace VehiclePurchase.Application.Mappings
             CreateMap<VehicleMake, VehicleMakeDTO>();
             CreateMap<VehicleBodyType, VehicleBodyTypeDTO>();
             CreateMap<VehicleModel, VehicleModelDTO>();
+            CreateMap<ThirdPartyPurchase, ThirdPartyPurchasesDTO>();
         }
     }
 }
